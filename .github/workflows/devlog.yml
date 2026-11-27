@@ -2,7 +2,7 @@ name: devlog
 
 on:
   schedule:
-    - cron: "47 * * * *"   # every hour at :47
+    - cron: "47 0,2,5,7,10,12,14,17,19,22 * * *"   # 10 runs/day max
   workflow_dispatch:
 
 concurrency:
