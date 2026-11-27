@@ -79,6 +79,7 @@ def main():
     if len(lines) == 2:
         lines += ["_No public activity today. Rest day._", ""]
 
+    lines.append(f"_Last synced: {datetime.now(PHT):%I:%M %p} PHT_")
     out = os.path.join(ROOT, "entries", f"{today:%Y}", f"{today}.md")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, "w", encoding="utf-8").write("\n".join(lines))
